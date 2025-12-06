@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Model files and checkpoints (exclude large model files)
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.h5
+*.hdf5
+pre-trained_models/
+**/model.pt
+**/best_model.pt
+
+# Allow experiment directories and outputs (but exclude .pt files above)
+# Experiment directories are included, only .pt files are excluded
+
+# Outputs directory - INCLUDED (small output files like gifs, images)
+# output/ is tracked
+
+# Large media files (exclude video files)
+*.mov
+*.mp4
+*.avi
+# Exclude large PDFs
+*.pdf
+
+# Allow images and gifs in outputs and experiments (these are small output files)
+# Note: .pt files are already excluded above
+# We don't ignore output/ directory - it's tracked
+# Images and gifs in output/ and experiment directories are included
+
+# Data files (allow config JSONs, exclude large data files)
+*.csv
+*.parquet
+*.feather
+# Allow JSON config files (usually small)
+!**/*.json
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Anaconda/conda
+Anaconda*.sh
+Miniconda*.sh
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Large media files (exclude video files)
+*.mov
+*.mp4
+*.avi
+# Exclude large PNG files (over 50MB)
+# Note: Small PNGs in outputs/experiments are still allowed via patterns below
+# Exclude archive files
+*.tar.gz
+*.zip
+*.tar
